@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mrp4sten/weatherapi.git"
+    "url": "https://github.com/mrp4sten/weatherapi"
   },
   "author": "Mauricio Pasten (mrp4sten)",
   "license": "ISC",
