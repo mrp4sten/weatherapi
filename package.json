@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/mrp4sten/weatherapi"
   },
+  "type": "module",
   "author": "Mauricio Pasten (mrp4sten)",
   "license": "ISC",
   "bugs": {
@@ -20,6 +21,11 @@
     "standard": "^17.1.0"
   },
   "eslintConfig": {
-    "extends": "standard"
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.4"
   }
 }
