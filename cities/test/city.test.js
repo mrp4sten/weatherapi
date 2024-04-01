@@ -1,8 +1,9 @@
 import { assert, use } from 'chai'
 import superagent from 'chai-superagent'
-import { describe, it } from 'mocha'
+import { after, describe, it } from 'mocha'
 import request from 'supertest'
 import app from '../../app.js'
+import { cleanUpCities } from '../city.controller.js'
 
 use(superagent())
 
@@ -24,8 +25,12 @@ describe('Test suite for cities', () => {
         if (err) {
           return done(err)
         }
-        assert.equal(res.status, 200)
+        assert.equal(res.status, 201)
         done()
       })
   })
+})
+
+after(async () => {
+  await cleanUpCities()
 })
