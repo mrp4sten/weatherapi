@@ -7,7 +7,7 @@ import app from '../../app.js'
 use(superagent())
 
 describe('Test suite for cities', () => {
-  it('Should return status 200 when a city is added', (done) => {
+  it('Should return status 201 when a city is added', (done) => {
     const city = {
       name: 'New York',
       location: {

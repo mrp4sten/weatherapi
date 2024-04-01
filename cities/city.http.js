@@ -8,5 +8,5 @@ import { createCity } from './city.controller.js'
 export const postCity = async (req, res) => {
   const city = req.body
   await createCity(city)
-  res.status(200).send()
+  res.status(201).send()
 }
