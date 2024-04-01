@@ -1,0 +1,21 @@
+meta {
+  name: Create City
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/cities
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "New York",
+    "location": {
+      "lat": 40.7128,
+      "long": -74.006
+    }
+  }
+}
