@@ -4,7 +4,7 @@
   "description": "API weather using external API",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,19 @@
   },
   "homepage": "https://github.com/mrp4sten/weatherapi#readme",
   "devDependencies": {
-    "standard": "^17.1.0"
+    "chai": "^5.1.0",
+    "chai-http": "^4.4.0",
+    "chai-superagent": "^3.0.0",
+    "mocha": "^10.4.0",
+    "standard": "^17.1.0",
+    "superagent": "^8.1.2",
+    "supertest": "^6.3.4"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.2.4"
