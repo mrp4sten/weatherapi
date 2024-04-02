@@ -50,7 +50,7 @@ describe('Test suite for cities', () => {
           return done(err)
         }
         request(app)
-          .get(`/cities/${city.name}`)
+          .get(`/cities/?name=${city.name}`)
           .set('Content-Type', 'application/json')
           .end((err, res) => {
             if (err) {
@@ -144,7 +144,7 @@ describe('Test suite for cities', () => {
           }
         }
         request(app)
-          .put(`/cities/${cityPhoenix.name}`)
+          .put(`/cities/?name=${cityPhoenix.name}`)
           .set('Content-Type', 'application/json')
           .send(cityPhiladelphia)
           .end((err, res) => {
@@ -178,7 +178,7 @@ describe('Test suite for cities', () => {
         }
 
         request(app)
-          .delete(`/cities/${citySanAntonio.name}`)
+          .delete(`/cities/?name=${citySanAntonio.name}`)
           .end((err, res) => {
             if (err) {
               return done(err)
