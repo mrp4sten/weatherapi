@@ -1,6 +1,6 @@
 import { assert, use } from 'chai'
 import superagent from 'chai-superagent'
-import { after, describe, it } from 'mocha'
+import { afterEach, describe, it } from 'mocha'
 import request from 'supertest'
 import app from '../../app.js'
 import { cleanUpCities } from '../city.controller.js'
@@ -190,6 +190,6 @@ describe('Test suite for cities', () => {
   })
 })
 
-after(async () => {
+afterEach(async () => {
   await cleanUpCities()
 })

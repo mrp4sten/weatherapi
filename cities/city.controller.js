@@ -4,7 +4,7 @@ export const createCity = (city) => {
   return new Promise((resolve, reject) => {
     const newCity = new CityModel(city)
     newCity.save()
-      .then(() => resolve())
+      .then((result) => resolve(result))
       .catch((err) => reject(err))
   })
 }
@@ -22,14 +22,14 @@ export const getCities = () => {
   return new Promise((resolve, reject) => {
     CityModel.find()
       .exec()
-      .then((city) => resolve(city))
+      .then((cities) => resolve(cities))
       .catch((err) => reject(err))
   })
 }
 
 export const updatetCity = (cityName, city) => {
   return new Promise((resolve, reject) => {
-    CityModel.findOneAndUpdate({ name: cityName }, city)
+    CityModel.findOneAndUpdate({ name: cityName }, city, { new: true })
       .exec()
       .then((city) => resolve(city))
       .catch((err) => reject(err))
