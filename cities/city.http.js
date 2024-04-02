@@ -11,6 +11,11 @@ export const httpPostCity = async (req, res) => {
   res.status(201).send(result)
 }
 
+/**
+ * Get a city or cities if the request have a query
+ * @param {*} req
+ * @param {*} res
+ */
 export const httpGetCity = async (req, res) => {
   const cityName = req.query.name
 
@@ -25,6 +30,11 @@ export const httpGetCity = async (req, res) => {
   res.status(200).send(response)
 }
 
+/**
+ * Update a city
+ * @param {*} req
+ * @param {*} res
+ */
 export const httpUpdateCity = async (req, res) => {
   const cityName = req.query.name
   const city = req.body
@@ -33,6 +43,11 @@ export const httpUpdateCity = async (req, res) => {
   res.status(200).send(result)
 }
 
+/**
+ * Delete a city
+ * @param {*} req
+ * @param {*} res
+ */
 export const httpDeleteCity = async (req, res) => {
   const cityName = req.query.name
   const result = await deleteCity(cityName)
