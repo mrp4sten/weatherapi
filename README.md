@@ -30,3 +30,8 @@ DB_PASSWORD=password
 API_KEY=api_key
 ENV=prod # dev for testing
 ```
+
+### Bruno
+
+Actually the directory `WeatherAPICollection` is a directory that you can import on `Bruno` that is an app for do request like `Postman`
+Follow here: <https://www.usebruno.com/>
