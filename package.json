@@ -4,7 +4,8 @@
   "description": "API weather using external API",
   "main": "app.js",
   "scripts": {
-    "test": "mocha **/test/*.test.js"
+    "test": "mocha **/test/*.test.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
