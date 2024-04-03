@@ -1,4 +1,4 @@
-import { createCity, deleteCity, getCities, getCity, updatetCity } from './city.controller.js'
+import { bootstrapCities, createCity, deleteCity, getCities, getCity, updatetCity } from './city.controller.js'
 
 /**
  * Post a city
@@ -52,4 +52,15 @@ export const httpDeleteCity = async (req, res) => {
   const cityName = req.query.name
   const result = await deleteCity(cityName)
   res.status(200).send(result)
+}
+
+/**
+ * Fill database with cities from request
+ * @param {*} req
+ * @param {*} res
+ */
+export const httpBootstrapCities = async (req, res) => {
+  const cities = req.body
+  await bootstrapCities(cities)
+  res.status(200).send()
 }

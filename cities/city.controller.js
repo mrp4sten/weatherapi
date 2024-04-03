@@ -54,3 +54,12 @@ export const cleanUpCities = () => {
       .catch((err) => reject(err))
   })
 }
+
+// Bootstrap Cityes for send many cities to database
+export const bootstrapCities = (cities) => {
+  return new Promise((resolve, reject) => {
+    CityModel.insertMany(cities)
+      .then((result) => resolve())
+      .catch((err) => reject(err))
+  })
+}

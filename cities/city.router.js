@@ -1,5 +1,5 @@
 import express from 'express'
-import { httpDeleteCity, httpGetCity, httpPostCity, httpUpdateCity } from './city.http.js'
+import { httpBootstrapCities, httpDeleteCity, httpGetCity, httpPostCity, httpUpdateCity } from './city.http.js'
 const citiesRouter = express.Router()
 
 citiesRouter.route('/')
@@ -7,5 +7,8 @@ citiesRouter.route('/')
   .get(httpGetCity)
   .put(httpUpdateCity)
   .delete(httpDeleteCity)
+
+citiesRouter.route('/bootstrap')
+  .post(httpBootstrapCities)
 
 export default citiesRouter

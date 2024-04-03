@@ -188,6 +188,63 @@ describe('Test suite for cities', () => {
           })
       })
   })
+  it('Should return status 200 when request post to bootstrap', (done) => {
+    const cities = [
+      {
+        name: 'New York',
+        location: {
+          lat: 40.7128,
+          long: -74.0060
+        }
+      },
+      {
+        name: 'Washington',
+        location: {
+          lat: 38.9072,
+          long: -77.0369
+        }
+      },
+      {
+        name: 'Chicago',
+        location: {
+          lat: 41.8781,
+          long: -87.6298
+        }
+      },
+      {
+        name: 'Los Angeles',
+        location: {
+          lat: 34.0522,
+          long: -118.2437
+        }
+      },
+      {
+        name: 'San Francisco',
+        location: {
+          lat: 37.7749,
+          long: -122.4194
+        }
+      },
+      {
+        name: 'Seattle',
+        location: {
+          lat: 47.6062,
+          long: -122.3321
+        }
+      }
+    ]
+    request(app)
+      .post('/cities/bootstrap')
+      .set('Content-Type', 'application/json')
+      .send(cities)
+      .end((err, res) => {
+        if (err) {
+          return done(err)
+        }
+        assert.equal(res.status, 200)
+        done()
+      })
+  })
 })
 
 afterEach(async () => {
