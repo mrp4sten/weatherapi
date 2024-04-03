@@ -1,0 +1,15 @@
+meta {
+  name: Get Weather by CityName
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/weather/?cityName=Los Angeles
+  body: none
+  auth: none
+}
+
+query {
+  cityName: Los Angeles
+}

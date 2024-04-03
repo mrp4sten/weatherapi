@@ -1,0 +1,58 @@
+meta {
+  name: Create Cities
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/cities/bootstrap
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "name": "New York",
+      "location": {
+        "lat": 40.7128,
+        "long": -74.006
+      }
+    },
+    {
+      "name": "Washington",
+      "location": {
+        "lat": 38.9072,
+        "long": -77.0369
+      }
+    },
+    {
+      "name": "Chicago",
+      "location": {
+        "lat": 41.8781,
+        "long": -87.6298
+      }
+    },
+    {
+      "name": "Los Angeles",
+      "location": {
+        "lat": 34.0522,
+        "long": -118.2437
+      }
+    },
+    {
+      "name": "San Francisco",
+      "location": {
+        "lat": 37.7749,
+        "long": -122.4194
+      }
+    },
+    {
+      "name": "Seattle",
+      "location": {
+        "lat": 47.6062,
+        "long": -122.3321
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Update City
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/cities/?name=Los Angeles
+  body: json
+  auth: none
+}
+
+query {
+  name: Los Angeles
+}
+
+body:json {
+  {
+    "location": {
+      "lat": 34.052235,
+      "long": -118.243683
+    },
+    "name": "Los Angeles"
+  }
+}
